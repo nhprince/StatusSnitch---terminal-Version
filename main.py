@@ -10,17 +10,26 @@ from datetime import datetime
 import getpass
 import time
 import sys
+import os
+
+# === ENABLE ANSI COLORS ON WINDOWS CONSOLE ===
+if os.name == "nt":
+    import ctypes
+    kernel32 = ctypes.windll.kernel32
+    handle = kernel32.GetStdHandle(-11)  # STD_OUTPUT_HANDLE = -11
+    mode = ctypes.c_ulong()
+    kernel32.GetConsoleMode(handle, ctypes.byref(mode))
+    kernel32.SetConsoleMode(handle, mode.value | 0x0004)  # ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
 
 # === COLORS ===
-RED = "\033[0;31m"
-GREEN = "\033[0;32m"
-YELLOW = "\033[1;33m"
-BLUE = "\033[0;34m"
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
 MAGENTA = "\033[35m"
-CYAN = "\033[0;36m"
-WHITE="\033[1;37m"
+CYAN = "\033[36m"
+WHITE = "\033[37m"
 RESET = "\033[0m"
-
 
 # === LOGO ===
 print(GREEN + r"""
@@ -183,5 +192,3 @@ finally:
     print(f"{GREEN}[*] Exiting...{RESET}")
 # === END OF SCRIPT ===
     sys.exit(0)
-
-    
