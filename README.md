@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 #### 🔻 Step 1: Clone the Repository
 ```bash
-[git clone https://github.com/yourusername/StatusSnitch.git](https://github.com/nhprince/StatusSnitch---terminal-Version.git)
+git clone https://github.com/yourusername/StatusSnitch.git](https://github.com/nhprince/StatusSnitch---terminal-Version.git
 cd StatusSnitch---terminal-Version
 ```
 
@@ -87,7 +87,7 @@ Real-time updates will show in the terminal.
 
 #### 🔻 Step 1: Clone the Repository
 ```bash
-[git clone https://github.com/yourusername/StatusSnitch.git](https://github.com/nhprince/StatusSnitch---terminal-Version.git)
+git clone https://github.com/yourusername/StatusSnitch.git](https://github.com/nhprince/StatusSnitch---terminal-Version.git
 cd StatusSnitch---terminal-Version
 ```
 
